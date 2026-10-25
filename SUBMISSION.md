@@ -9,7 +9,7 @@ Release with downloadable artifacts:
 |---|---|---|
 | Submission CSV | [`output.csv`](output.csv) | 518 rows, 3,044 steps, validator 0 errors / 0 warnings |
 | Submission highlights | [`HIGHLIGHTS.txt`](HIGHLIGHTS.txt) | Factual cover page: differentiators, verified metrics, reviewer's map |
-| AI chat transcript | [`ai_chat_transcript.txt`](ai_chat_transcript.txt) | Full transcript plus highlights cover, 313 messages, 1,590,284 bytes |
+| AI chat transcript | [`ai_chat_transcript.txt`](ai_chat_transcript.txt) | Full transcript plus highlights cover, 313 messages, 1,591,193 bytes |
 | Unmodified transcript | [`agent-trace/opencode/ses_e8e4b25a2ffe7t9LnTN8HJYGRC.txt`](agent-trace/opencode/ses_e8e4b25a2ffe7t9LnTN8HJYGRC.txt) | Pure session export, 313 messages, 1,586,472 bytes |
 | Raw session export | [`agent-trace/opencode/ses_e8e4b25a2ffe7t9LnTN8HJYGRC.json`](agent-trace/opencode/ses_e8e4b25a2ffe7t9LnTN8HJYGRC.json) | OpenCode structured export |
 | Packaged code | [`code.zip`](code.zip) | 37 files, no dataset, includes evaluation reports |
@@ -45,8 +45,8 @@ Presentation copy:
 
 ```text
 session  ses_e8e4b25a2ffe7t9LnTN8HJYGRC
-sha256   709cf86e4e2c95a8be3e662aa4a66797b45c9eb8f6288ff2e2625ca92308c82a
-bytes    1,590,284
+sha256   b38d0683d75387f3aff0ae171347ffb5f24e88301fef62cc186e93fae1886f7b
+bytes    1,591,193
 messages 313
 ```
 

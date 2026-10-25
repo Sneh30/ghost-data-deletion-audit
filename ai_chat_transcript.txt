@@ -46,6 +46,20 @@ the state from participant-visible evidence and proves every emitted step.
 - Reproducible packaging: code.zip includes source, prompts, tests, tools, and evaluation
   reports, excludes the dataset, and its packaged run is byte-identical to output.csv.
 
+HARD PARTS THIS HANDLES
+- Multilingual intent: deletion versus access, correction, export, or opt-out, so
+  non-deletion requests become NOT_APPLICABLE with no invented steps.
+- Identity resolution: current and historical email, phone, email hash, and stable user_*
+  IDs; names are never used for matching.
+- Temporal integrity: capture time versus observation time, a 7-day citation window, and
+  late evidence handled separately from findings.
+- Evidence breadth: SQL snapshots, application logs, JSON, PDFs, text handovers, and
+  screenshots through local macOS Vision OCR, cached by file hash.
+- Policy breadth: delete, redact, anonymize, retain, and account tombstones, with ordered
+  remediation that disables flows and blocks restores before dependent records.
+- Auditability: canonical JSON, contiguous step numbers, the exact seven-key schema, and
+  a hard validator that rejects malformed output.
+
 VERIFIED NUMBERS
 - 518/518 case IDs; 3,044 steps.
 - 349 INCOMPLETE, 159 COMPLETE, 10 NOT_APPLICABLE.
