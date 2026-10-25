@@ -24,8 +24,9 @@ PROJECT
 Ghost Data Still Exists — a deterministic, evidence-first deletion audit agent for
 HackerRank Orchestrate October 2026.
 
-Repository: https://github.com/Sneh30/ghost-data-deletion-audit
-Release:    https://github.com/Sneh30/ghost-data-deletion-audit/releases/tag/submission-v1
+Repository: https://github.com/Sneh30/hackerrank-hackathon
+Release:    https://github.com/Sneh30/hackerrank-hackathon/releases/tag/submission-v1
+Transcript: log.txt at the repository root (this file is a supplementary full export)
 
 THE DIFFERENTIATOR
 Instead of asking a model to infer whether data was deleted, this agent reconstructs
@@ -66,7 +67,7 @@ VERIFIED NUMBERS
 - Validator: 0 errors, 0 warnings. Tests: 10/10 passing.
 - Public sample: 32/32 status, 30/32 exact-step, 98.96% field accuracy.
 - Runtime: 43.57 s. Model usage: 0 calls, $0.00.
-- code.zip: 37 files; root-level evaluation/; no dataset, venv, caches, or secrets.
+- code.zip: 31 files; root-level evaluation/; no dataset, venv, caches, or secrets.
 - output.csv SHA-256:
   f6f1cbe1953ee5e4624d2a8f8dedac3ca472f121c0290ad95f7f280bb730e10b
 

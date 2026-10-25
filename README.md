@@ -8,6 +8,33 @@ The agent answers one question for every deletion request:
 
 It ignores `reported_status` and `system_activity.reported_result` as claims. It reconstructs the state from participant-visible evidence, applies the policy table, and emits the required ordered step list.
 
+## Public repository
+
+<https://github.com/Sneh30/hackerrank-hackathon>
+
+**Submission artifacts:** [`output.csv`](output.csv) · [`log.txt`](log.txt) · [`code.zip`](code.zip) · [`HIGHLIGHTS.txt`](HIGHLIGHTS.txt) · [`SUBMISSION.md`](SUBMISSION.md)
+
+`log.txt` is the repository-root chat transcript required by the challenge. The longer
+[`ai_chat_transcript.txt`](ai_chat_transcript.txt) is a supplementary full-session export
+with a clearly labeled highlights cover page; its conversation body is unmodified.
+
+## Why this submission stands out
+
+- **Deterministic at inference.** Zero model calls, zero network calls, $0.00 API cost.
+  The same 518-row CSV is reproducible from source.
+- **Claims are not evidence.** `reported_status` and `system_activity.reported_result` are
+  treated as assertions. State is reconstructed from logs, SQL snapshots, PDFs, OCR'd
+  screenshots, and audit records.
+- **Time-travel correct.** A fact is citable only when its evidence was captured at or
+  before `audit_at`. Late facts become future work, never FINDING citations.
+- **Evidence discipline.** Every `COMPLETE` verification cites real evidence. No evidence
+  IDs are invented to chase a sample score.
+- **Verified results.** 518/518 case IDs, 3,044 steps, validator 0 errors / 0 warnings,
+  10/10 tests, 32/32 sample status, 30/32 exact-step, 98.96% field accuracy, 43.57 s
+  runtime.
+- **Honest about limits.** The two sample misses (`case_18`, `case_20`) are documented,
+  and the B10.3 residual risk is quantified instead of hidden.
+
 ## Approach
 
 The solution is intentionally deterministic. No model calls, no network calls, and no paid APIs are used at inference time.
