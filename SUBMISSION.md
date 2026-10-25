@@ -49,6 +49,10 @@ assistant response, reasoning traces, tool calls and outputs, system turns, and 
 summaries. The raw JSON preserves the structured trace. Credentials were not captured; the
 only token-shaped strings are the masked `gho_****` output from `gh auth status`.
 
+The session read the provided synthetic dataset while debugging, so the transcript contains
+incidental excerpts such as case IDs, synthetic identities, and evidence snippets. The
+`dataset/` tree itself is deliberately not published in this repository.
+
 ## Reproducing
 
 The `dataset/` directory is intentionally excluded from this public repository because the
