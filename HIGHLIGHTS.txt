@@ -1,0 +1,67 @@
+================================================================================
+SUBMISSION HIGHLIGHTS
+Candidate-added cover page. The conversation below is the unmodified session export.
+================================================================================
+
+PROJECT
+Ghost Data Still Exists — a deterministic, evidence-first deletion audit agent for
+HackerRank Orchestrate October 2026.
+
+Repository: https://github.com/Sneh30/ghost-data-deletion-audit
+Release:    https://github.com/Sneh30/ghost-data-deletion-audit/releases/tag/submission-v1
+
+THE DIFFERENTIATOR
+Instead of asking a model to infer whether data was deleted, this agent reconstructs
+the state from participant-visible evidence and proves every emitted step.
+
+- Deterministic at inference: 0 model calls, 0 network calls, $0.00 API cost. The same
+  518-row CSV is reproducible from source.
+- Claims are not evidence: reported_status and system_activity.reported_result are
+  ignored as truth. Each resource state comes from logs, SQL snapshots, PDFs, OCR'd
+  screenshots, and audit records.
+- Time-travel correct: a fact is citable only when its evidence file was captured at or
+  before audit_at. Late-captured facts can guide discovery and future verification, but
+  are never used as FINDING citations.
+- Complete remediation: every INCOMPLETE case carries findings with evidence, the full
+  ordered remediation plan, and the future checks that must pass.
+- Evidence discipline: every COMPLETE verification cites real evidence. The agent does
+  not invent evidence IDs to chase a sample score.
+- Reproducible packaging: code.zip includes source, prompts, tests, tools, and evaluation
+  reports, excludes the dataset, and its packaged run is byte-identical to output.csv.
+
+VERIFIED NUMBERS
+- 518/518 case IDs; 3,044 steps.
+- 349 INCOMPLETE, 159 COMPLETE, 10 NOT_APPLICABLE.
+- Validator: 0 errors, 0 warnings. Tests: 10/10 passing.
+- Public sample: 32/32 status, 30/32 exact-step, 98.96% field accuracy.
+- Runtime: 43.57 s. Model usage: 0 calls, $0.00.
+- code.zip: 37 files; root-level evaluation/; no dataset, venv, caches, or secrets.
+- output.csv SHA-256:
+  f6f1cbe1953ee5e4624d2a8f8dedac3ca472f121c0290ad95f7f280bb730e10b
+
+WHAT THE TWO SAMPLE MISSES ACTUALLY ARE
+case_18 and case_20 each miss one audit_record_* verification whose ID does not appear
+anywhere in participant-visible evidence. Fabricating those two IDs would have closed
+the exact-step gap. The agent does not. The misses are documented, not hidden.
+
+REVIEWER'S MAP (bracketed numbers are message numbers below)
+[010] Pass 1 adversarial audit prompt; full checklist walkthrough begins.
+[148] Pass 1 final summary: full run result, validator, packaging.
+[151] Pass 2 prompt: B7 intent, B8 identity, B9 time travel, B10 claim independence.
+[202] B9 fix: only citable non-compliance may determine deletion status.
+[208]-[213] Late-capture analysis confirmed against sample gold.
+[226]-[233] B10 mutation quantification; claim-free control trade-off.
+[257] code.zip rebuilt with root-level evaluation/; packaged output verified.
+[268] Pass 2 audit report, including B11-B15 deferred and verdict "Pass 3 needed".
+[270]-[313] Public repo creation, clean commit, push, and verification.
+[302] Readable transcript export.
+
+ON THE "PASS 3 NEEDED" VERDICT
+Pass 2 audited B7-B10. B11-B15 were explicitly outside that pass's scope. The report
+states this plainly and lists the residual risks, including B10.3: workflow claims can
+change which account ID is discovered, but never change deletion status. That honesty is
+part of the submission, not a footnote.
+
+================================================================================
+END OF HIGHLIGHTS — SESSION TRANSCRIPT BEGINS BELOW
+================================================================================
