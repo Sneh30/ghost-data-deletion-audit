@@ -1,0 +1,19 @@
+# Challenge data is intentionally not published (it is supplied separately by HackerRank).
+dataset/
+
+# Local environment and caches
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+
+# OS / editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Local secrets
+.env
+.env.*
+*.pem
+*.key
